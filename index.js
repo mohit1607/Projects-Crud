@@ -5,7 +5,7 @@ const errorHandlerMiddleware = require('./middlewares/error-handler')
 const notFound = require('./middlewares/not-found')
 require('dotenv').config()
 const app = express()  
-const port = 8000|| process.env.PORT
+
 
 //middlewares
 app.use(express.json())
@@ -17,6 +17,7 @@ app.get('/', (req, res) => res.send('Server Running'))
  app.use(errorHandlerMiddleware)
  app.use(notFound)
 
+ const port =  process.env.PORT || 8000
 
 const start = async () => {
     try{
