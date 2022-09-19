@@ -1,6 +1,6 @@
 const Projects = require('../models/proejct')
 const catchAsync = require('../middlewares/catchAsync');
-const MethodsError = require('../errors/custom-error')
+const MethodsError = require('../errors/customError')
 const createCustomError = MethodsError.createCustomError
 // why this error is not reflecting
 const bringAllProjects = catchAsync( async(req,res) => {
