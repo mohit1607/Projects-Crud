@@ -1,6 +1,7 @@
 const Projects = require('../models/proejct')
 const catchAsync = require('../middlewares/catchAsync');
-const {createCustomError} = require('../errors/custom-error')
+const MethodsError = require('../errors/custom-error')
+const createCustomError = MethodsError.createCustomError
 // why this error is not reflecting
 const bringAllProjects = catchAsync( async(req,res) => {
     const allProjects = await Projects.find({}); // don't forget to use await it costing you 30 minutes
