@@ -12,6 +12,7 @@ app.use(express.json())
 
 //routes
 app.use('/api/v1/projects', router);
+app.get('/', (req, res) => res.send('Server Running'))
 //extra error middlewares
  app.use(errorHandlerMiddleware)
  app.use(notFound)
